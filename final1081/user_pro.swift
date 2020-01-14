@@ -11,12 +11,14 @@ import FirebaseStorage
 class user_pro: UIViewController,UITextFieldDelegate,UITextViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate{
    
     let account:String
+    let editable:Bool
     let db  = Firestore.firestore()
     var photo_path :String
    let storage = Storage.storage(url:"gs://final1081.appspot.com")
-    init?(coder: NSCoder, account:String) {
+    init?(coder: NSCoder, account:String,ed:Bool) {
        self.account = account
         self.photo_path=""
+        self.editable = ed
        super.init(coder: coder)
     }
     required init?(coder: NSCoder) {
@@ -52,7 +54,7 @@ class user_pro: UIViewController,UITextFieldDelegate,UITextViewDelegate,UIImageP
                              guard let downloadURL = url else {
                                 return
                              }
-                             print(downloadURL)
+                             //print(downloadURL)
                             self.photo_path = downloadURL.absoluteString
                           })
                        }
@@ -91,7 +93,7 @@ class user_pro: UIViewController,UITextFieldDelegate,UITextViewDelegate,UIImageP
        
         let Message:String = "upload/choose from storage"
         let alertcontroller = UIAlertController(title: "", message: Message, preferredStyle: .alert)
-                       let Upload_Action = UIAlertAction(title: "upload", style: .default){(_)in print("U")
+                       let Upload_Action = UIAlertAction(title: "upload", style: .default){(_)in //print("U")
                           let imagePicker = UIImagePickerController()
                             
                               imagePicker.sourceType = .savedPhotosAlbum
@@ -101,7 +103,7 @@ class user_pro: UIViewController,UITextFieldDelegate,UITextViewDelegate,UIImageP
                         self.present(imagePicker,animated:true,completion:nil)
         }
         alertcontroller.addAction(Upload_Action)
-        let Choose_Action = UIAlertAction(title: "choose", style: .default){(_)in print("C")
+        let Choose_Action = UIAlertAction(title: "choose", style: .default){(_)in //print("C")
             
         }
         alertcontroller.addAction(Choose_Action)
@@ -137,7 +139,7 @@ class user_pro: UIViewController,UITextFieldDelegate,UITextViewDelegate,UIImageP
          
             
             if name.text?.isEmpty == true {
-                            print("empty")
+                           // print("empty")
                 update()
             }
                        else{
@@ -158,7 +160,15 @@ class user_pro: UIViewController,UITextFieldDelegate,UITextViewDelegate,UIImageP
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap : UITapGestureRecognizer = UITapGestureRecognizer(target:self,action:#selector(dismisskeyboard))
+        
         self.view.addGestureRecognizer(tap)
+        if editable == false{
+            edit_lebal.isEnabled = false
+            edit_lebal.isHidden = true
+            edit_switch.isEnabled = false
+            edit_switch.isSelected = false
+            edit_switch.isHidden = true
+        }
         if photo.image == nil{
              photobutton.setTitle("新增", for:.normal)
              photobutton.isHidden = false

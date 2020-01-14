@@ -7,7 +7,7 @@
 //
 
 
-import FirebaseAuth
+//import FirebaseAuth
 import Firebase
 import UIKit
 
@@ -96,7 +96,7 @@ class Main: UIViewController,UITextFieldDelegate {
                         return
                 }
                 self.dismiss(animated: true, completion: nil)
-                self.performSegue(withIdentifier: "toshow", sender: self.Account.text)
+                self.performSegue(withIdentifier: "toshow", sender:nil)
                 
                
         }

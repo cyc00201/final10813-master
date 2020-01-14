@@ -20,8 +20,11 @@ class user_interview: UIViewController {
        fatalError()
     }
     @IBSegueAction func topro(_ coder: NSCoder) -> user_pro? {
-        return user_pro(coder: coder, account: account)
+        return user_pro(coder: coder, account: account,ed:true)
         
+    }
+   @IBSegueAction func toQA(_ coder: NSCoder) -> QA? {
+    return QA(coder: coder,account:account)
     }
     @IBOutlet weak var Account: UILabel!
     override func viewDidLoad() {

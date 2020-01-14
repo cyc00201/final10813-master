@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		5903D6E923BDFD59000567DF /* user_pro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5903D6E823BDFD59000567DF /* user_pro.swift */; };
 		59470FF623AA259A00DC4471 /* user_interview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59470FF523AA259900DC4471 /* user_interview.swift */; };
+		598F52EB23CC692300B9FC9A /* popular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598F52EA23CC692300B9FC9A /* popular.swift */; };
+		598F52ED23CC6DD700B9FC9A /* MovieConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598F52EC23CC6DD700B9FC9A /* MovieConfiguration.swift */; };
+		598F52EF23CCA18E00B9FC9A /* moviedetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598F52EE23CCA18E00B9FC9A /* moviedetail.swift */; };
+		59A9C55123C5B4DD00AE0383 /* movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9C55023C5B4DD00AE0383 /* movie.swift */; };
+		59A9C55323C5B55500AE0383 /* moviecell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9C55223C5B55500AE0383 /* moviecell.swift */; };
+		59A9C55523C5C3DA00AE0383 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A9C55423C5C3DA00AE0383 /* MovieService.swift */; };
 		59F280DC23AA0B2100618CCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F280DB23AA0B2100618CCA /* AppDelegate.swift */; };
 		59F280DE23AA0B2100618CCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F280DD23AA0B2100618CCA /* SceneDelegate.swift */; };
 		59F280E023AA0B2100618CCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F280DF23AA0B2100618CCA /* ViewController.swift */; };
@@ -17,6 +23,8 @@
 		59F280E823AA0B2300618CCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59F280E623AA0B2300618CCA /* LaunchScreen.storyboard */; };
 		59F280F023AA0EAA00618CCA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59F280EF23AA0EAA00618CCA /* GoogleService-Info.plist */; };
 		59F280F223AA10CF00618CCA /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F280F123AA10CF00618CCA /* Main.swift */; };
+		59F7FA1823CDDC27001B236F /* QA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F7FA1723CDDC27001B236F /* QA.swift */; };
+		59F7FA1A23CDE8FE001B236F /* QAcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F7FA1923CDE8FE001B236F /* QAcell.swift */; };
 		6114E26B30F034D980D93BD6 /* Pods_final1081.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF8CBFE5C81AADCD707CD96 /* Pods_final1081.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +32,12 @@
 		2940A979F310E84F9A6B85E5 /* Pods-final1081.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-final1081.debug.xcconfig"; path = "Target Support Files/Pods-final1081/Pods-final1081.debug.xcconfig"; sourceTree = "<group>"; };
 		5903D6E823BDFD59000567DF /* user_pro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user_pro.swift; sourceTree = "<group>"; };
 		59470FF523AA259900DC4471 /* user_interview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user_interview.swift; sourceTree = "<group>"; };
+		598F52EA23CC692300B9FC9A /* popular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popular.swift; sourceTree = "<group>"; };
+		598F52EC23CC6DD700B9FC9A /* MovieConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieConfiguration.swift; sourceTree = "<group>"; };
+		598F52EE23CCA18E00B9FC9A /* moviedetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moviedetail.swift; sourceTree = "<group>"; };
+		59A9C55023C5B4DD00AE0383 /* movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movie.swift; sourceTree = "<group>"; };
+		59A9C55223C5B55500AE0383 /* moviecell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moviecell.swift; sourceTree = "<group>"; };
+		59A9C55423C5C3DA00AE0383 /* MovieService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		59F280D823AA0B2100618CCA /* final1081.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = final1081.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59F280DB23AA0B2100618CCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59F280DD23AA0B2100618CCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +48,8 @@
 		59F280E923AA0B2300618CCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59F280EF23AA0EAA00618CCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		59F280F123AA10CF00618CCA /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		59F7FA1723CDDC27001B236F /* QA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QA.swift; sourceTree = "<group>"; };
+		59F7FA1923CDE8FE001B236F /* QAcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAcell.swift; sourceTree = "<group>"; };
 		7BF8CBFE5C81AADCD707CD96 /* Pods_final1081.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_final1081.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF66F19AA346D0CE05C2D0ED /* Pods-final1081.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-final1081.release.xcconfig"; path = "Target Support Files/Pods-final1081/Pods-final1081.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,16 +88,24 @@
 			isa = PBXGroup;
 			children = (
 				59F280DB23AA0B2100618CCA /* AppDelegate.swift */,
+				59F7FA1923CDE8FE001B236F /* QAcell.swift */,
+				59F7FA1723CDDC27001B236F /* QA.swift */,
 				59F280DD23AA0B2100618CCA /* SceneDelegate.swift */,
 				59F280DF23AA0B2100618CCA /* ViewController.swift */,
+				59A9C55223C5B55500AE0383 /* moviecell.swift */,
 				59F280E123AA0B2100618CCA /* Main.storyboard */,
+				598F52EE23CCA18E00B9FC9A /* moviedetail.swift */,
 				59F280F123AA10CF00618CCA /* Main.swift */,
+				598F52EA23CC692300B9FC9A /* popular.swift */,
+				59A9C55423C5C3DA00AE0383 /* MovieService.swift */,
+				598F52EC23CC6DD700B9FC9A /* MovieConfiguration.swift */,
 				59F280E423AA0B2300618CCA /* Assets.xcassets */,
 				59F280E623AA0B2300618CCA /* LaunchScreen.storyboard */,
 				59F280E923AA0B2300618CCA /* Info.plist */,
 				59F280EF23AA0EAA00618CCA /* GoogleService-Info.plist */,
 				59470FF523AA259900DC4471 /* user_interview.swift */,
 				5903D6E823BDFD59000567DF /* user_pro.swift */,
+				59A9C55023C5B4DD00AE0383 /* movie.swift */,
 			);
 			path = final1081;
 			sourceTree = "<group>";
@@ -221,10 +245,18 @@
 			files = (
 				5903D6E923BDFD59000567DF /* user_pro.swift in Sources */,
 				59470FF623AA259A00DC4471 /* user_interview.swift in Sources */,
+				59A9C55323C5B55500AE0383 /* moviecell.swift in Sources */,
+				59F7FA1A23CDE8FE001B236F /* QAcell.swift in Sources */,
 				59F280E023AA0B2100618CCA /* ViewController.swift in Sources */,
 				59F280DC23AA0B2100618CCA /* AppDelegate.swift in Sources */,
 				59F280DE23AA0B2100618CCA /* SceneDelegate.swift in Sources */,
+				59A9C55523C5C3DA00AE0383 /* MovieService.swift in Sources */,
+				59F7FA1823CDDC27001B236F /* QA.swift in Sources */,
+				598F52EF23CCA18E00B9FC9A /* moviedetail.swift in Sources */,
+				598F52EB23CC692300B9FC9A /* popular.swift in Sources */,
+				59A9C55123C5B4DD00AE0383 /* movie.swift in Sources */,
 				59F280F223AA10CF00618CCA /* Main.swift in Sources */,
+				598F52ED23CC6DD700B9FC9A /* MovieConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
