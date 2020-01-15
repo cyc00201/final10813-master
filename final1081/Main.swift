@@ -18,7 +18,11 @@ class Main: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       do {
+                     try Auth.auth().signOut()
+                  } catch {
+                    print(error)
+        }
         // Do any additional setup after loading the view.
     }
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -74,11 +78,7 @@ class Main: UIViewController,UITextFieldDelegate {
                        alertcontroller.addAction(okAction)
                        self.present(alertcontroller, animated: true, completion: nil)
         
-            do {
-               try Auth.auth().signOut()
-            } catch {
-              print(error)
-            }
+           
             
             return
         } else {

@@ -75,7 +75,7 @@ class user_pro: UIViewController,UITextFieldDelegate,UITextViewDelegate,UIImageP
             else{
                 print(self.photo_path)
                 
-                let fileReference = Storage.storage().reference(forURL: self.photo_path)
+                let fileReference = self.storage.reference(forURL: self.photo_path)
                 fileReference.getData(maxSize: 1024*1024*1024){ (data, error) in
                 if let error = error {
                     print("ERROR")

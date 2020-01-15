@@ -175,7 +175,7 @@
                                 <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Profile"/>
                                 <connections>
-                                    <segue destination="vuC-6M-5r3" kind="show" identifier="" id="EXb-Ht-exe"/>
+                                    <segue destination="vuC-6M-5r3" kind="show" identifier="topro" destinationCreationSelector="topro:" id="EXb-Ht-exe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHa-00-ycO">
@@ -457,6 +457,9 @@
                                             <state key="normal" title="comment">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="response:" destination="XrJ-rx-2vv" eventType="touchUpInside" id="GI3-O1-Xo2"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGf-mB-vap">
                                             <rect key="frame" x="8" y="8" width="200" height="46"/>
@@ -664,6 +667,6 @@
         <image name="Image-1" width="112.5" height="112.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2uF-16-mVS"/>
+        <segue reference="EXb-Ht-exe"/>
     </inferredMetricsTieBreakers>
 </document>
