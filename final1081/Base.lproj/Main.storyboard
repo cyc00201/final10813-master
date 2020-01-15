@@ -24,7 +24,7 @@
                                     <action selector="Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p3I-wP-S08"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test922815" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="anV-HF-6z0">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="anV-HF-6z0">
                                 <rect key="frame" x="38" y="308" width="338" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="8ad-Gr-jQt"/>
@@ -175,7 +175,7 @@
                                 <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Profile"/>
                                 <connections>
-                                    <segue destination="vuC-6M-5r3" kind="show" destinationCreationSelector="topro:" id="EXb-Ht-exe"/>
+                                    <segue destination="vuC-6M-5r3" kind="show" identifier="" id="EXb-Ht-exe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHa-00-ycO">
@@ -466,6 +466,9 @@
                                                 <constraint firstAttribute="width" constant="200" id="OQb-Mq-HOC"/>
                                             </constraints>
                                             <state key="normal" title="Account"/>
+                                            <connections>
+                                                <action selector="toP:" destination="XrJ-rx-2vv" eventType="touchUpInside" id="lco-X4-gH4"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -504,6 +507,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="vuC-6M-5r3" kind="show" identifier="toP" destinationCreationSelector="toPSegue:" id="2uF-16-mVS"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LkA-Nk-Giu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -657,4 +663,7 @@
         <image name="Image" width="112.5" height="112.5"/>
         <image name="Image-1" width="112.5" height="112.5"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2uF-16-mVS"/>
+    </inferredMetricsTieBreakers>
 </document>

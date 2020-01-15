@@ -10,9 +10,19 @@ import UIKit
 import Firebase
 class QA:UICollectionViewController{
 
+    var toA:String?
+    @IBSegueAction func toPSegue(_ coder: NSCoder) -> user_pro? {
+        return user_pro(coder: coder, account: toA!, ed: false)
+    }
+    @IBAction func toP(_ sender: UIButton) {
+        //print()
+        toA = sender.titleLabel?.text
+        performSegue(withIdentifier: "toP", sender: nil)
+    }
+    
     var refreshControl:UIRefreshControl?
    let account:String
-    var toA:String?
+ 
     var comments = [QueryDocumentSnapshot]()
     let db  = Firestore.firestore()
     init?(coder: NSCoder, account:String) {
@@ -23,9 +33,7 @@ class QA:UICollectionViewController{
     required init?(coder: NSCoder) {
        fatalError()
     }
-    @IBSegueAction func to_other_profs(_ coder: NSCoder) -> user_pro? {
-        return user_pro(coder: coder, account: toA!,ed:false)
-    }
+   
     func getcomments(isupdate:Bool){
         if(isupdate == false)
         {
