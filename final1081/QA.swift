@@ -40,6 +40,8 @@ class QA:UICollectionViewController{
         let query = db.collection("QA")
         DataID.removeAll()
         comments.removeAll()
+        
+          self.collectionView.refreshControl?.beginRefreshing()
          query.getDocuments{(querySnapshot,err)in
             if let err = err {
                  print("Error getting documents: \(err)")
@@ -47,21 +49,26 @@ class QA:UICollectionViewController{
                 
                 print(querySnapshot?.documents.count)
                  for document in querySnapshot!.documents {
-                     print("\(document.documentID) => \(document.data())")
+                    // print("\(document.documentID) => \(document.data())")
                     self.DataID.append(document.documentID)
                     self.comments.append(document)
-                    print(self.comments[self.comments.count-1].get("email") as! String)
+                    //print(self.comments[self.comments.count-1].get("email") as! String)
                     
                     var indexPaths=[IndexPath]()
-                    if(isupdate==true){
+                    
                     DispatchQueue.main.async {
                         self.collectionView.insertItems(at: indexPaths)
                     }
                         
-                    }
                  }
+              
              }
+           
+            
          }
+        if self.collectionView.refreshControl?.isRefreshing == true {
+                                  self.collectionView.refreshControl?.endRefreshing()
+        }
         //print("R")
         
     }
@@ -81,9 +88,9 @@ class QA:UICollectionViewController{
                    
        collectionView.refreshControl = UIRefreshControl()
        collectionView.refreshControl?.addTarget(self, action: #selector(refreshcomment), for: .valueChanged)
-       collectionView.refreshControl?.beginRefreshing()
+       
         getcomments(isupdate: true)
-     
+         getcomments(isupdate: false)
         //print("C0",comments.count)
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -92,8 +99,8 @@ class QA:UICollectionViewController{
         }
     override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         //print("STOP0")
-        if indexPath.item >= comments.count-1 {
-            //print("STOP")
+        if indexPath.item >= comments.count {
+            print("STOP")
             getcomments(isupdate: false)
         }
     }
